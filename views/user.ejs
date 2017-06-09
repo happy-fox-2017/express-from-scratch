@@ -4,6 +4,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta charset="utf-8">
     <title>USER</title>
   </head>
@@ -40,10 +41,12 @@
         <form class = "col s12" action="/user" method="POST">
           <div class="row">
             <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
               <input type="text" id="username" name="username" placeholder = "Input your First Name"/>
               <label for="username"> Username </label>
             </div>
             <div class="input-field col s6">
+              <i class="material-icons prefix">email</i>
               <!-- <input type="text" id="email" name="email" required="" aria-required="true" type="email" class="validate" placeholder = "Input your Email"/> -->
               <input id="email" type="email" name="email" placeholder = "Input your Email" class="validate">
               <label for="email" data-error="wrong" data-success="right">Email</label>
