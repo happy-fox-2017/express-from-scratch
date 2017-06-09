@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Edit User</title>
+  </head>
+  <body>
+    <div class = "container">
+      <h3> Welcome <%= users.username %> </h3>
+      <div class = "row">
+        <form class = "col s12" action="/user/edit/<%= users.id %>" method="POST">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input type="text" id="username" name="username" value = "<%= users.username %>"/>
+              <label for="username"> Username </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">email</i>
+              <input id="email" name="email" type="email" required="" aria-required="true" class="validate" value = "<%= users.email %>"/>
+              <label for="email"> Email </label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+        </form>
+      </div>
+  </div>
+  </body>
+</html>
