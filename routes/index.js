@@ -5,7 +5,9 @@ router.get('/', function(req, res) {
 });
 
 router.get('/user', function(req, res) {
-  res.send('User page');
+  res.render('user', {
+    users: [{username: 'hello', email: 'xxx'}],
+  });
 });
 
 router.post('/user', function(req, res) {
