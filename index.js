@@ -1,9 +1,8 @@
 const express = require('express');
+const routes = require('./routes');
 
 const app = express();
 
-app.get('/', function(req, res) {
-  res.send('I Love Hactiv8!');
-});
+app.use('/', routes);
 
 app.listen(3000);
