@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', function(req, res) {
-  res.send('I Love Hactiv8!');
+  res.render('index', {});
 });
 
 router.get('/user', function(req, res) {
