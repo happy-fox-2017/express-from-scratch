@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+  <body>
+    <header>
+      <h3><%= message %> data :</h3>
+    </header>
+      <main>
+        <form action="<%= action %>" method="post">
+          Username :
+          <input type="text" name="username" required>
+          Email :
+          <input type="email" name="email" required>
+          <input type="submit" value="Submit">
+        </form>
+      </main>
+    <footer>
+      <a href="http://localhost:3000">index</a>
+    </footer>
+  </body>
+</html>
