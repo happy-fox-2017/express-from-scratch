@@ -1,7 +1,10 @@
-const route = require('express').Router()
+const express = require('express');
+let route = express.Router()
 
 route.get('/', function (req, res) {
-  res.send('I am legend!')
+  //res.send('index with ---- response send ---- bukan dengan --response render--')
+  res.render('index');
+
 })
 
 module.exports = route;
