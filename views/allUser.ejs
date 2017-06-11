@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This is user page</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody>
+     <% users.forEach(user => { %>
+        <tr>
+          <td><%=user.id %></td>
+          <td><%=user.username%></td>
+          <td><%=user.email%></td>
+          <td>
+            <a href="/users/edit/<%=user.id%>">edit</a>
+            <a href="/users/delete/<%=user.id%>">delete</a>
+          </td>
+        </tr>
+     <% }) %>
+
+     <a href="/users/create">Add User</a>
+      </tbody>
+    </table>
+  </body>
+</html>
