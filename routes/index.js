@@ -6,24 +6,32 @@ router.get('/', function(req, res) {
 
 router.get('/user', function(req, res) {
   res.render('user', {
-    users: [{username: 'hello', email: 'xxx'}],
+    users: [{id: 1, username: 'hello', email: 'xxx'}],
   });
 });
 
-router.post('/user', function(req, res) {
-  res.send('User post form');
+router.get('/user/add', function(req, res) {
+  res.render('user_add', {});
+});
+
+router.post('/user/add', function(req, res) {
+  console.log(req.body);
+  res.redirect('/user');
 });
 
 router.get('/user/edit/:id', function(req, res) {
-  res.send('User edit page');
+  const user = {username: 'hello'};
+  res.render('user_edit', {user});
 });
 
 router.post('/user/edit/:id', function(req, res) {
-  res.send('User edit form');
+  console.log(req.body);
+  res.redirect('/user');
 });
 
 router.get('/user/delete/:id', function(req, res) {
-  res.send('User delete');
+  console.log(req.params.id);
+  res.redirect('/user');
 });
 
 module.exports = router;
