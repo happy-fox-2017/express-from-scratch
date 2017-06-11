@@ -1,0 +1,33 @@
+{
+  "name": "express-from-scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body": "^5.1.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "parser": "^0.1.4",
+    "pg": "^6.2.4",
+    "sequelize": "^4.0.0",
+    "sequelize-cli": "^2.7.0",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happy-fox-2017/express-from-scratch.git"
+  },
+  "author": "Kokoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/happy-fox-2017/express-from-scratch/issues"
+  },
+  "homepage": "https://github.com/happy-fox-2017/express-from-scratch#readme"
+}
