@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Edit User</title>
+    <link href="/css/style.css" rel="stylesheet" />
+    <link href="/css/form.css" rel="stylesheet" />
+    <link href="/css/table.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form action="/user/edit/<%=user.id%>" method="POST" class="form-style-5">
+      <fieldset>
+        <legend><span class="number"><%=user.id%></span> Edit User</legend>
+        <input type="text" name="username" value="<%=user.username%>" placeholder="Username">
+        <input type="email" name="email" value="<%=user.email%>" placeholder="Email">
+        <input type="submit" value="Save" />
+      </fieldset>
+    </form>
+  </body>
+</html>

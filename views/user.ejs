@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>User</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h3 style="margin-left: 20px;">User List</h3>
+    <button style="margin-left: 46%; margin-top: -10px;" type="button" onclick="addUser()">Add User</button>
+
+    <table style="width:50%; margin: 20px;">
+      <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Option</th>
+      </tr>
+      <% for(var i=0; i<users.length; i += 1) { %>
+      <%   var user = users[i]; %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.username %></td>
+          <td><%= user.email %></td>
+          <td>
+            <button type="button" onclick="editUser('<%= user.id %>')">Edit</button>
+            <button type="button" onclick="deleteUser('<%= user.id %>')">Delete</button>
+          </td>
+        </tr>
+      <% } %>
+    </table>
+    <script src="scripts/user_table.js"></script>
+  </body>
+</html>
