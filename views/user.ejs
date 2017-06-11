@@ -21,7 +21,7 @@
       <% for(var i=0; i<users.length; i += 1) { %>
       <%   var user = users[i]; %>
         <tr>
-          <td>1</td>
+          <td><%= user.id %></td>
           <td><%= user.username %></td>
           <td><%= user.email %></td>
           <td>
