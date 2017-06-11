@@ -7,5 +7,9 @@ var editUser = function (id) {
 };
 
 var deleteUser = function (id) {
-  window.location.href = '/user/delete/' + id;
+  var deleteConfirmation = confirm('User with id: ' + id + ', will be deleted!');
+  if (deleteConfirmation) {
+    window.location.href = '/user/delete/' + id;
+  }
+
 };
