@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Layout</title>
+  </head>
+  <body>
+    <header>
+      <h3>User Table</h3>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% User.forEach((element) => { %>
+          <tr>
+            <td><%= element.id %></td>
+            <td><%= element.username %></td>
+            <td><%= element.email %></td>
+            <td><a href="/user/edit/<%= element.id %>">edit</a></td>
+            <!-- <td><a href = "/delete/<%= element.id %>"><i>delete</i></a></td> -->
+            <td><a href="#" onclick="deleteRecord(<%= element.id %>)">delete</a></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </main>
+    <br>
+    <a href="http://localhost:3000">index</a>
+  </body>
+  <script type="text/javascript">
+    function deleteRecord(id) {
+      var ask = window.confirm("Are you sure want to delete this user?");
+      if (ask) {
+        window.alert("this user successfully deleted");
+        document.location.href = '/delete/' +id;
+      }
+    }
+    </script>
+</html>
