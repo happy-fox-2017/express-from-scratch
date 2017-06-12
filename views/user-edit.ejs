@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Edit User Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Medium.woff">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1></h1>
+    <div class="row">
+      <div class="col s6 offset-s3">
+        <h3>Updating user, ID <%- user.id %></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6 offset-s3">
+        <form class="" action="" method="post">
+          <input type="text" name="username" value="<%- user.username %>" placeholder="Username">
+          <input type="email" name="email" value="<%- user.email %>" placeholder="Email">
+          <div class="col">
+            <button type="submit" class="btn medium">Submit</button>
+            <a href="/user" class="btn medium red">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>Display User</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/fonts/roboto/Roboto-Medium.woff">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h3>Displaying users</h3>
+      </div>
+      <div class="col s12">
+        <h5>Table "Users" is populated with..
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Option</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%
+              data.forEach(d => {
+            %>
+            <tr>
+              <td><%- d.id %></td>
+              <td><%- d.name %></td>
+              <td><%- d.email %></td>
+              <td><a class="btn-small" href="./user/edit/<%- d.id %>">edit </a><a class="btn-small" href="./user/delete/<%- d.id %>" onclick="return confirm('Are you sure')">delete</a></td>
+            </tr>
+            <%
+              })
+            %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s3 offset-s2">
+        <a class="waves-effect waves-light btn" href="./user/create">create</a>
+      </div>
+      <div class="col s3 offset-s3">
+        <a class="btn" href="./">Home</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
