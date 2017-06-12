@@ -51,10 +51,11 @@ router.get('/delete/:id', function (req, res){
 
 router.get('/user/edit/:id', function(req, res){
   let id = req.params.id;
+  // console.log(id);
   res.render('form', {pesan: 'update data ', action: '/user/edit/' + id})
 });
 
-router.post('/user/edit/:id', function(req, res){
+router.post('/user/edit/:id', parseUrlEncoded, function(req, res){
   let getDataForm = {
     userName: req.body.username,
     emailUser: req.body.email 
@@ -68,7 +69,7 @@ router.post('/user/edit/:id', function(req, res){
     }
   })
   .then(function (_users){
-    res.render('succes', {hasil: getDataForm.userName, pesan: 'update sukses'})
+    res.render('success', {hasil: getDataForm.userName, pesan: 'update '})
   })
 })
 
