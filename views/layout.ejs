@@ -1,0 +1,48 @@
+<!-- views/layout.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Express yes</title>
+  </head>
+  <body>
+    <header>
+    <h3>User Table</h3>
+    </header>
+    <main>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach((element) => { %>
+        <tr>
+          <td><%= element.id%></td>
+          <td><%= element.username%></td>
+          <td><%= element.email%></td>
+          <td><a href="/user/edit/<%=element.id%>">edit</a></td>
+          <td><a href="/delete/<%=element.id%>">delete</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    </main>
+    <br/>
+    <a href="http://localhost:3000">index</a>
+  </body>
+  <!-- <script type="text/javascript">
+    function deleteRecord(id) {
+      var ask = window.confirm("Are you sure you want to delete this record?");
+      if (ask) {
+        window.alert("This record was successfully deleted.");
+        document.location.href = '/delete/' + id;
+      }
+    }
+  </script> -->
+</html>
