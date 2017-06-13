@@ -12,6 +12,18 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+    return queryInterface.bulkInsert('Users', [{
+      username : 'Pella De Vega',
+      email : 'pdvegaa@gmail.com',
+      createdAt : new Date(),
+      updatedAt : new Date()
+    },
+    {
+      username : 'Vega',
+      email : 'metamorphega@gmail.com',
+      createdAt : new Date(),
+      updatedAt : new Date()
+    }], {})
   },
 
   down: function (queryInterface, Sequelize) {
@@ -22,11 +34,6 @@ module.exports = {
       Example:
       return queryInterface.bulkDelete('Person', null, {});
     */
-    return queryInterface.bulkDelete('Users',[{
-      name : 'John Jiah',
-      email : 'jjiah@yahoo.com',
-      createdAt : new Date(),
-      updatedAt : new Date()
-    }], {});
+    return queryInterface.bulkDelete('Users', null, {});
   }
 };
